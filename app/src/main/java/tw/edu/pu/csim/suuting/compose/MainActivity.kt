@@ -103,6 +103,7 @@ fun Greeting(name: String) {
                 painter = painterResource(id = R.drawable.helen),
                 contentDescription = "簡介照片"
             )
+            
         }
 
         Text(text = "作者:資管系-王思婷,年齡:20,水瓶座", color = PurpleGrey80)
@@ -120,6 +121,10 @@ fun Greeting(name: String) {
             interactionSource = interactionSource) {
             Text("按我!，自我介紹")
         }
+        Image(
+            painter = painterResource(id = R.drawable.mymy4),
+            contentDescription = "簡介"
+        )
         LaunchedEffect(interactionSource) {
             interactionSource.interactions.collect { interaction ->
                 when (interaction) {
@@ -150,7 +155,9 @@ fun Greeting(name: String) {
             else -> "No state"
         }
         }
+
     }
+
 
 
 
